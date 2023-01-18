@@ -9,11 +9,11 @@ Para esse projeto utilizei o microframework GetX para controle de estado e geren
 - [x] Login com senha e Google;
 - [x] Logout;
 
-## ⏲️ Em desenvolvimento
-- [x] Gerenciar dados de usuário no Cloud FireStore;
-- [x] Gerenciar dados das vendas no Cloud FireStore;
-- [x] Controle de estoque;
-- [x] Histórico financeiro;
+## ⏱️ Em desenvolvimento
+- Gerenciar dados de usuário no Cloud FireStore;
+- Gerenciar dados das vendas no Cloud FireStore;
+- Controle de estoque;
+- Histórico financeiro;
 
 ## 💻 Tecnologias utilizadas
 - Flutter
