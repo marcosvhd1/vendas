@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "373598107782",
+    "project_id": "vendas-442ab",
+    "storage_bucket": "vendas-442ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373598107782:android:8fbd1b5e1908be52183907",
+        "android_client_info": {
+          "package_name": "br.com.marcosvhd.vendas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373598107782-4lk2njb310ebnihogjkh8mfrbnmca1or.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZokxSmRihzGhbt0nfFI8KfZNj-R_WYqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373598107782-4lk2njb310ebnihogjkh8mfrbnmca1or.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
