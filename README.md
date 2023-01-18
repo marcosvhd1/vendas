@@ -42,7 +42,8 @@ flutter pub get
 
 - Na página de Autenticação no Firebase, adicione os métodos Email/Senha e Google
 
-- Após isso, você irá baixar o arquivo firebase_options, que está disponível na configuração do seu projeto no Firebase, e colocar no app no caminho
+- Após isso, você irá baixar o arquivo firebase_options, que está disponível 
+na configuração do seu projeto no Firebase, e colocar no app no caminho<br>
 ``` lib -> src -> config -> firebase_options.dart ```
 
 - Para ativar o Google Sign-In, gere a chave SHA-1, com o comando
@@ -50,7 +51,8 @@ flutter pub get
 keytool -list -v -alias androiddebugkey -keystore  %USERPROFILE%\.android\debug.keystore
 ```
 
-- Abra seu projeto no Firebase, e cole a chave SHA-1 no campo Impressão Digital, no caminho
+- Abra seu projeto no Firebase, e cole a chave SHA-1 
+no campo Impressão Digital, no caminho<br>
 ``` Engrenagem -> Configurações do Projeto -> Seus aplicativos -> Adicionar impressão digital ```
 
 - No seu terminal, rode o app
