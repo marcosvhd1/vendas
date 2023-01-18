@@ -66,14 +66,26 @@ class AuthRepository extends GetxController {
         idToken: googleAuth?.idToken,
       );
       
-      await _auth.signInWithCredential(credential);
+      final credentials = await _auth.signInWithCredential(credential);
+      
+      if (credentials.additionalUserInfo!.isNewUser) {
+        userController.createUser(UserModel(
+          providerId: credentials.additionalUserInfo!.providerId,
+          email: credentials.user!.email!,
+          fullName: credentials.user!.displayName ?? '',
+          phoneNo: credentials.user!.phoneNumber,
+          password: null,
+        ));
+      } else {
+        UserModel? user = await userController.getUserDetails(credentials.user!.email!);
 
-      await userController.createUser(UserModel(
-          email: googleUser!.email,
-          password: '',
-          fullName: googleUser.displayName!,
-          phoneNo: '',
-      ));
+        if (user != null) {
+          if (user.providerId == null) {
+            user.providerId = credentials.additionalUserInfo!.providerId;
+            await userController.updateUserData(user, true);
+          }
+        }
+      }
       
     } on FirebaseAuthException catch (e) {
       log(e.toString());

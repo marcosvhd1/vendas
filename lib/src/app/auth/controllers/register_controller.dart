@@ -34,8 +34,8 @@ class RegisterController extends GetxController {
         await userController.createUser(UserModel(
           email: email.text,
           password: password.text,
-          fullName: fullName.text,
-          phoneNo: phoneNo.text,
+          fullName: fullName.text.isEmpty ? null : fullName.text,
+          phoneNo: phoneNo.text.isEmpty ? null : phoneNo.text,
         ));
       }
 

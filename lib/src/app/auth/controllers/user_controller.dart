@@ -20,14 +20,16 @@ class UserController extends GetxController {
     }
   }
 
-  Future<void> updateUserData(UserModel user) async {
+  Future<void> updateUserData(UserModel user, bool isGoogle) async {
     String? error = await userRepo.updateUserData(user);
 
-    showSnackbar(
-      type: error != null ? "error" : "sucess",
-      title: error != null ? "Erro" : "Sucesso",
-      message: error ?? "Usuário alterado com sucesso.",
-    );
+    if (!isGoogle) {
+      showSnackbar(
+        type: error != null ? "error" : "sucess",
+        title: error != null ? "Erro" : "Sucesso",
+        message: error ?? "Usuário alterado com sucesso.",
+      );
+    }
   }
 
   Future<UserModel?> getUserDetails(String email) async {
