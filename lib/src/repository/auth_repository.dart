@@ -3,10 +3,14 @@ import 'dart:developer';
 import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:vendas/src/app/auth/controllers/user_controller.dart';
+import 'package:vendas/src/app/auth/models/user_model.dart';
 import 'package:vendas/src/errors/firebase_erros.dart';
 
 class AuthRepository extends GetxController {
   static AuthRepository get instance => Get.find<AuthRepository>();
+
+  final userController = Get.put(UserController());
 
   final _auth = FirebaseAuth.instance;
   late final Rx<User?> firebaseUser;
@@ -24,8 +28,7 @@ class AuthRepository extends GetxController {
 
   Future<String?> createUser(String email, String password) async {
     try {
-      await _auth.createUserWithEmailAndPassword(
-          email: email, password: password);
+      await _auth.createUserWithEmailAndPassword(email: email, password: password);
     } on FirebaseAuthException catch (e) {
       log(e.toString());
       final error = TFirebaseError.code(e.code);
@@ -64,6 +67,14 @@ class AuthRepository extends GetxController {
       );
       
       await _auth.signInWithCredential(credential);
+
+      await userController.createUser(UserModel(
+          email: googleUser!.email,
+          password: '',
+          fullName: googleUser.displayName!,
+          phoneNo: '',
+      ));
+      
     } on FirebaseAuthException catch (e) {
       log(e.toString());
       final error = TFirebaseError.code(e.code);

@@ -1,9 +1,9 @@
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:vendas/src/app/auth/login/login_screen.dart';
-import 'package:vendas/src/app/auth/register/register_screen.dart';
-import 'package:vendas/src/app/auth/welcome/welcome_screen.dart';
-import 'package:vendas/src/app/core/home/screens/home.dart';
+import 'package:get/get.dart';
+import 'package:vendas/src/app/auth/screens/login/login_screen.dart';
+import 'package:vendas/src/app/auth/screens/register/register_screen.dart';
+import 'package:vendas/src/app/auth/screens/welcome/welcome_screen.dart';
+import 'package:vendas/src/app/core/screens/home/home_screen.dart';
 
 class Routes {
   static final routes = [

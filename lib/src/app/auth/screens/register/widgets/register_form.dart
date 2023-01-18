@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vendas/src/app/auth/register/register_controller.dart';
+import 'package:vendas/src/app/auth/controllers/register_controller.dart';
 import 'package:vendas/src/common/auth_loading.dart';
 import 'package:vendas/src/common/email_textfield.dart';
 import 'package:vendas/src/common/google/google_button.dart';
@@ -15,6 +15,7 @@ class RegisterForm extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(RegisterController());
     return Form(
+      key: controller.formKey,
       child: Column(
         children: [
           SizedBox(height: tDftSpace),
@@ -35,7 +36,7 @@ class RegisterForm extends StatelessWidget {
           SizedBox(height: tDftSpace),
           TextFormField(
             keyboardType: TextInputType.phone,
-            controller: controller.phoneN,
+            controller: controller.phoneNo,
             decoration: InputDecoration(
               prefixIcon: Container(
                 margin: const EdgeInsets.only(left: 10),

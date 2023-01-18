@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vendas/src/app/auth/login/login_controller.dart';
+import 'package:vendas/src/app/auth/controllers/login_controller.dart';
 import 'package:vendas/src/common/auth_loading.dart';
 import 'package:vendas/src/common/email_textfield.dart';
 import 'package:vendas/src/common/google/google_button.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vendas/src/app/auth/login/widgets/login_form.dart';
-import 'package:vendas/src/app/auth/login/widgets/login_header.dart';
+import 'package:vendas/src/app/auth/screens/login/widgets/login_form.dart';
+import 'package:vendas/src/app/auth/screens/login/widgets/login_header.dart';
 import 'package:vendas/src/constants/sizes.dart';
 
 class LoginScreen extends StatelessWidget {

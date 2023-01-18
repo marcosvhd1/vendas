@@ -1,5 +1,7 @@
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:vendas/src/app/auth/controllers/user_controller.dart';
+import 'package:vendas/src/app/auth/models/user_model.dart';
 import 'package:vendas/src/constants/get_snackbar.dart';
 import 'package:vendas/src/repository/auth_repository.dart';
 
@@ -7,11 +9,12 @@ class RegisterController extends GetxController {
   static RegisterController get to => Get.find<RegisterController>();
 
   final authRepo = Get.find<AuthRepository>();
+  final userController = Get.put(UserController());
 
   final formKey = GlobalKey<FormState>();
   final fullName = TextEditingController();
   final email = TextEditingController();
-  final phoneN = TextEditingController();
+  final phoneNo = TextEditingController();
   final password = TextEditingController();
 
   RxBool isPasswordObscure = true.obs;
@@ -26,6 +29,15 @@ class RegisterController extends GetxController {
       isLoading.value = true;
       String? error = await authRepo.createUser(email.text, password.text);
       isLoading.value = false;
+
+      if (error == null) {
+        await userController.createUser(UserModel(
+          email: email.text,
+          password: password.text,
+          fullName: fullName.text,
+          phoneNo: phoneNo.text,
+        ));
+      }
 
       showSnackbar(
         type: error == null ? "sucess" : "error",

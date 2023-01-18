@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vendas/src/app/auth/register/widgets/register_form.dart';
-import 'package:vendas/src/app/auth/register/widgets/register_header.dart';
+import 'package:vendas/src/app/auth/screens/register/widgets/register_form.dart';
+import 'package:vendas/src/app/auth/screens/register/widgets/register_header.dart';
 import 'package:vendas/src/constants/sizes.dart';
 
 class RegisterScreen extends StatelessWidget {
