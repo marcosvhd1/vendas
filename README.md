@@ -11,6 +11,7 @@ Para esse projeto utilizei o microframework GetX para controle de estado e geren
 - [x] Gerenciar dados de usuário no Cloud FireStore;
 
 ## ⏱️ Em desenvolvimento
+- Recuperação de senha;
 - Gerenciar dados das vendas no Cloud FireStore;
 - Controle de estoque;
 - Histórico financeiro;
