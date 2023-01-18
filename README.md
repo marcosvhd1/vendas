@@ -8,9 +8,9 @@ Para esse projeto utilizei o microframework GetX para controle de estado e geren
 - [x] Registrar usuário no Firebase via email e Google Sign-In;
 - [x] Login com senha e Google;
 - [x] Logout;
+- [x] Gerenciar dados de usuário no Cloud FireStore;
 
 ## ⏱️ Em desenvolvimento
-- Gerenciar dados de usuário no Cloud FireStore;
 - Gerenciar dados das vendas no Cloud FireStore;
 - Controle de estoque;
 - Histórico financeiro;

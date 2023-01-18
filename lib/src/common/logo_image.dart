@@ -15,8 +15,11 @@ class LogoImage extends StatelessWidget {
         if (height == 70) SizedBox(height: tDftSpace),
         SizedBox(
           height: height,
-          child: Image(
-            image: AssetImage(context.darkMode ? logoDarkPath : logoPath),
+          child: Hero(
+            tag: 'logo',
+            child: Image(
+              image: AssetImage(context.darkMode ? logoDarkPath : logoPath),
+            ),
           ),
         ),
         if (height == 70) SizedBox(height: tDftSpace * 2),
