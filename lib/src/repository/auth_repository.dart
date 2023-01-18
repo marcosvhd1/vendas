@@ -72,7 +72,7 @@ class AuthRepository extends GetxController {
         userController.createUser(UserModel(
           providerId: credentials.additionalUserInfo!.providerId,
           email: credentials.user!.email!,
-          fullName: credentials.user!.displayName ?? '',
+          fullName: credentials.user!.displayName,
           phoneNo: credentials.user!.phoneNumber,
           password: null,
         ));
