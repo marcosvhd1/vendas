@@ -81,7 +81,10 @@ class AuthRepository extends GetxController {
 
         if (user != null) {
           if (user.providerId == null) {
+            user.fullName = credentials.user!.displayName;
+            user.phoneNo = credentials.user!.phoneNumber;
             user.providerId = credentials.additionalUserInfo!.providerId;
+            user.password = null;
             await userController.updateUserData(user, true);
           }
         }
