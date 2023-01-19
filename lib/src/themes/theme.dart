@@ -12,17 +12,17 @@ class TTheme {
     brightness: Brightness.light,
     textTheme: TTextTheme.lightTextTheme,
     outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
-    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.elevatedButtonTheme,
     appBarTheme: TAppBarTheme.appBarTheme,
-    inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
+    inputDecorationTheme: TTextFormFieldTheme.inputDecorationTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     textTheme: TTextTheme.darkTextTheme,
     outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
-    elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.elevatedButtonTheme,
     appBarTheme: TAppBarTheme.appBarTheme,
-    inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
+    inputDecorationTheme: TTextFormFieldTheme.inputDecorationTheme,
   );
 }
