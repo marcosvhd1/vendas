@@ -70,24 +70,10 @@ class AuthRepository extends GetxController {
       
       if (credentials.additionalUserInfo!.isNewUser) {
         userController.createUser(UserModel(
-          providerId: credentials.additionalUserInfo!.providerId,
           email: credentials.user!.email!,
           fullName: credentials.user!.displayName,
           phoneNo: credentials.user!.phoneNumber,
-          password: null,
         ));
-      } else {
-        UserModel? user = await userController.getUserDetails(credentials.user!.email!);
-
-        if (user != null) {
-          if (user.providerId == null) {
-            user.fullName = credentials.user!.displayName;
-            user.phoneNo = credentials.user!.phoneNumber;
-            user.providerId = credentials.additionalUserInfo!.providerId;
-            user.password = null;
-            await userController.updateUserData(user, true);
-          }
-        }
       }
       
     } on FirebaseAuthException catch (e) {
@@ -109,5 +95,20 @@ class AuthRepository extends GetxController {
       const error = TFirebaseError();
       log(error.message);
     }
+  }
+
+  Future<String?> resetPassword(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      log(e.toString());
+      final error = TFirebaseError.code(e.code);
+      return error.message;
+    } catch (e) {
+      log(e.toString());
+      const error = TFirebaseError();
+      return error.message;
+    }
+    return null;
   }
 }

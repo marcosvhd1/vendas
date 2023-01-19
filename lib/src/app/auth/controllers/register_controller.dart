@@ -33,7 +33,6 @@ class RegisterController extends GetxController {
       if (error == null) {
         await userController.createUser(UserModel(
           email: email.text,
-          password: password.text,
           fullName: fullName.text.isEmpty ? null : fullName.text,
           phoneNo: phoneNo.text.isEmpty ? null : phoneNo.text,
         ));

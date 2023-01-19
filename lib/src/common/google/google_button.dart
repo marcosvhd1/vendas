@@ -5,9 +5,7 @@ import 'package:vendas/src/common/google/google_loading.dart';
 import 'package:vendas/src/constants/images_path.dart';
 
 class GoogleButton extends StatelessWidget {
-  const GoogleButton({super.key, this.isRegister = false});
-
-  final bool isRegister;
+  const GoogleButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +17,7 @@ class GoogleButton extends StatelessWidget {
           onPressed: () => controller.handleSignInWithGoogle(),
           label: controller.isLoading.value
               ? const GoogleLoading()
-              : Text(
-                  isRegister ? 'CADASTRE-SE COM GOOGLE' : 'ENTRAR COM GOOGLE'),
+              : const Text('ENTRAR COM GOOGLE'),
           icon: controller.isLoading.value
               ? const SizedBox()
               : const Image(

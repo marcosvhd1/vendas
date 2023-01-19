@@ -69,7 +69,7 @@ class RegisterForm extends StatelessWidget {
           SizedBox(height: tDftSpace),
           const Text('OU'),
           SizedBox(height: tDftSpace),
-          const GoogleButton(isRegister: true),
+          const GoogleButton(),
           SizedBox(height: tDftSpace),
           TextButton(
             onPressed: () => Get.offAndToNamed("/login"),
