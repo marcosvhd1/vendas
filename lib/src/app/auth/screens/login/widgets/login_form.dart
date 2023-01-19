@@ -33,7 +33,7 @@ class LoginForm extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               TextButton(
-                onPressed: () {},
+                onPressed: () => Get.toNamed("/reset/password"),
                 child: const Text('Esqueceu sua senha?'),
               ),
             ],
