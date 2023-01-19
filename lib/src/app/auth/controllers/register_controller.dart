@@ -9,7 +9,7 @@ class RegisterController extends GetxController {
   static RegisterController get to => Get.find<RegisterController>();
 
   final authRepo = Get.find<AuthRepository>();
-  final userController = Get.put(UserController());
+  final userController = Get.find<UserController>();
 
   final formKey = GlobalKey<FormState>();
   final fullName = TextEditingController();
