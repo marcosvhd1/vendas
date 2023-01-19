@@ -21,6 +21,8 @@ class TFirebaseError {
         return const TFirebaseError('Operação não concluída. Por favor, contate o suporte');
       case 'user-disabled':
         return const TFirebaseError('Este usuário foi desativado. Por favor, contate o suporte.');
+      case 'network-request-failed':
+        return const TFirebaseError('Erro de rede. Verifique a conexão e tente novamente.');
       default:
         return const TFirebaseError();
     }
