@@ -16,7 +16,7 @@ class ResetPasswordController extends GetxController {
     showSnackbar(
       type: error == null ? "sucess" : "error",
       title: error == null ? "Sucesso" : "Erro",
-      message: error ?? "Email de atualização enviado.",
+      message: error ?? "Email de redefinição enviado.",
     );
   }
 }
