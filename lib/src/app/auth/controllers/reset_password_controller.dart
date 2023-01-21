@@ -13,6 +13,8 @@ class ResetPasswordController extends GetxController {
   Future<void> resetPassword() async {
     String? error = await authRepo.resetPassword(email.text);
 
+    Get.back();
+    
     showSnackbar(
       type: error == null ? "sucess" : "error",
       title: error == null ? "Sucesso" : "Erro",

@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:vendas/src/app/auth/controllers/user_controller.dart';
 import 'package:vendas/src/app/auth/models/user_model.dart';
+import 'package:vendas/src/constants/get_snackbar.dart';
 import 'package:vendas/src/errors/firebase_erros.dart';
 
 class AuthRepository extends GetxController {
@@ -91,6 +92,11 @@ class AuthRepository extends GetxController {
   Future<void> signOut() async {
     try {
       await _auth.signOut();
+      showSnackbar(
+        type: "sucess",
+        title: "Sucesso",
+        message: "Logout realizado.",
+      );
     } catch (e) {
       const error = TFirebaseError();
       log(error.message);
