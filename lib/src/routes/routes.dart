@@ -11,7 +11,7 @@ class Routes {
     GetPage(name: "/welcome", page: () => const WelcomeScreen()),
     GetPage(name: "/register", page: () => const RegisterScreen()),
     GetPage(name: "/login", page: () => const LoginScreen()),
-    GetPage(name: "/", page: () => const HomeScreen()),
+    GetPage(name: "/", page: () => HomeScreen()),
     GetPage(name: "/clients", page: () => Container()),
     GetPage(name: "/products", page: () => Container()),
     GetPage(name: "/sales", page: () => Container()),

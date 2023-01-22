@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vendas/src/common/google/google_controller.dart';
-import 'package:vendas/src/common/google/google_loading.dart';
+import 'package:vendas/src/common/loading.dart';
 import 'package:vendas/src/constants/images_path.dart';
 
 class GoogleButton extends StatelessWidget {
@@ -16,7 +16,7 @@ class GoogleButton extends StatelessWidget {
         () => OutlinedButton.icon(
           onPressed: () => controller.handleSignInWithGoogle(),
           label: controller.isLoading.value
-              ? const GoogleLoading()
+              ? const TLoading()
               : const Text('ENTRAR COM GOOGLE'),
           icon: controller.isLoading.value
               ? const SizedBox()

@@ -51,8 +51,14 @@ class TDrawer extends StatelessWidget {
               ),
               SizedBox(height: tDftSpace / 2),
               DrawerItem(
-                title: 'Nova venda',
+                title: 'Nova Venda',
                 icon: Icons.add_shopping_cart_rounded,
+                onPress: () {},
+              ),
+              SizedBox(height: tDftSpace / 2),
+              DrawerItem(
+                title: 'Configurações',
+                icon: Icons.settings_rounded,
                 onPress: () {},
               ),
               SizedBox(height: tDftSpace),

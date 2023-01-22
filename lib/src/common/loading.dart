@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:vendas/src/extensions/index.dart';
 import 'package:vendas/src/themes/colors/colors.dart';
 
-class GoogleLoading extends StatelessWidget {
-  const GoogleLoading({super.key});
+class TLoading extends StatelessWidget {
+  const TLoading({super.key});
 
   @override
   Widget build(BuildContext context) {
