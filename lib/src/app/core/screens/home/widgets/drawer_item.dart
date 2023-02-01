@@ -39,7 +39,7 @@ class DrawerItem extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: txtTheme.bodyText1?.apply(color: textColor),
+        style: txtTheme.bodyLarge?.apply(color: textColor),
       ),
       trailing: endIcon
           ? Container(

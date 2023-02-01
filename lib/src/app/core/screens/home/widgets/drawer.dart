@@ -35,7 +35,7 @@ class TDrawer extends StatelessWidget {
               DrawerItem(
                 title: 'Clientes',
                 icon: Icons.people_alt_rounded,
-                onPress: () {},
+                onPress: () => Get.toNamed("/clients"),
               ),
               SizedBox(height: tDftSpace / 2),
               DrawerItem(

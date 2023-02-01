@@ -4,6 +4,7 @@ import 'package:vendas/src/app/auth/screens/login/login_screen.dart';
 import 'package:vendas/src/app/auth/screens/register/register_screen.dart';
 import 'package:vendas/src/app/auth/screens/reset_password/reset_password_screen.dart';
 import 'package:vendas/src/app/auth/screens/welcome/welcome_screen.dart';
+import 'package:vendas/src/app/core/screens/clients/client_screen.dart';
 import 'package:vendas/src/app/core/screens/home/home_screen.dart';
 
 class Routes {
@@ -11,8 +12,8 @@ class Routes {
     GetPage(name: "/welcome", page: () => const WelcomeScreen()),
     GetPage(name: "/register", page: () => const RegisterScreen()),
     GetPage(name: "/login", page: () => const LoginScreen()),
-    GetPage(name: "/", page: () => HomeScreen()),
-    GetPage(name: "/clients", page: () => Container()),
+    GetPage(name: "/", page: () => const HomeScreen()),
+    GetPage(name: "/clients", page: () => const ClientScreen()),
     GetPage(name: "/products", page: () => Container()),
     GetPage(name: "/sales", page: () => Container()),
     GetPage(name: "/newSale", page: () => Container()),

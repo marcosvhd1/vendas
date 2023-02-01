@@ -22,8 +22,8 @@ class WelcomeScreen extends StatelessWidget {
               LogoImage(height: portrait ? height * 0.1 : height * 0.2),
               Column(
                 children: [
-                  Text('Gerencie suas vendas', style: context.h2),
-                  Text('Vamos começar sua jornada!', style: context.b2),
+                  Text('Gerencie suas vendas', style: context.dm),
+                  Text('Vamos começar sua jornada!', style: context.bm),
                 ],
               ),
               Row(

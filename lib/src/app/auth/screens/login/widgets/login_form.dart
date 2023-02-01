@@ -60,7 +60,7 @@ class LoginForm extends StatelessWidget {
             child: Text.rich(
               TextSpan(
                 text: 'Não possui uma conta? ',
-                style: context.b2,
+                style: context.bm,
                 children: const [
                   TextSpan(
                     text: 'Cadastre-se',

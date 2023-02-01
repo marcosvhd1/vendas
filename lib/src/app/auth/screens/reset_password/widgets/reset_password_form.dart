@@ -29,7 +29,7 @@ class ResetPasswordForm extends StatelessWidget {
           child: Text.rich(
             TextSpan(
               text: 'Não recebeu o email? ',
-              style: context.b2,
+              style: context.bm,
               children: const [
                 TextSpan(
                   text: 'Reenviar',

@@ -76,7 +76,7 @@ class RegisterForm extends StatelessWidget {
             child: Text.rich(
               TextSpan(
                 text: 'Já possui um cadastro? ',
-                style: context.b2,
+                style: context.bm,
                 children: const [
                   TextSpan(
                     text: 'Acessar',

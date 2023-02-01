@@ -11,8 +11,8 @@ class LoginHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const LogoImage(),
-        Text('Bem-vindo', style: context.h2),
-        Text('Faça suas vendas de forma ágil!', style: context.b2),
+        Text('Bem-vindo', style: context.dm),
+        Text('Faça suas vendas de forma ágil!', style: context.bm),
       ],
     );
   }

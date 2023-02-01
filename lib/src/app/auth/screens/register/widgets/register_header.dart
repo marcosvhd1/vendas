@@ -11,8 +11,8 @@ class RegisterHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const LogoImage(),
-        Text('Suba a Bordo', style: context.h2),
-        Text('Crie sua conta e inicie sua jornada!', style: context.b2),
+        Text('Suba a Bordo', style: context.dm),
+        Text('Crie sua conta e inicie sua jornada!', style: context.bm),
       ],
     );
   }

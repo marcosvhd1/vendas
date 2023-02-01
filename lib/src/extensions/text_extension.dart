@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 extension TTextStyle on BuildContext {
-  TextStyle get h1 => Theme.of(this).textTheme.headline1!;
-  TextStyle get h2 => Theme.of(this).textTheme.headline2!;
-  TextStyle get h3 => Theme.of(this).textTheme.headline3!;
-  TextStyle get h4 => Theme.of(this).textTheme.headline4!;
-  TextStyle get h5 => Theme.of(this).textTheme.headline5!;
-  TextStyle get h6 => Theme.of(this).textTheme.headline6!;
-  TextStyle get b1 => Theme.of(this).textTheme.bodyText1!;
-  TextStyle get b2 => Theme.of(this).textTheme.bodyText2!;
+  TextStyle get dl => Theme.of(this).textTheme.displayLarge!;
+  TextStyle get dm => Theme.of(this).textTheme.displayMedium!;
+  TextStyle get ds => Theme.of(this).textTheme.displaySmall!;
+  TextStyle get hm => Theme.of(this).textTheme.headlineMedium!;
+  TextStyle get hs => Theme.of(this).textTheme.headlineSmall!;
+  TextStyle get tl => Theme.of(this).textTheme.titleLarge!;
+  TextStyle get bl => Theme.of(this).textTheme.bodyLarge!;
+  TextStyle get bm => Theme.of(this).textTheme.bodyMedium!;
 }

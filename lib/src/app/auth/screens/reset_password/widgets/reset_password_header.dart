@@ -11,7 +11,7 @@ class ResetPasswordHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const LogoImage(),
-        Text('Informe seu email', style: context.h2),
+        Text('Informe seu email', style: context.dm),
         const Text('Você receberá um link para atualizar sua senha.'),
       ],
     );
