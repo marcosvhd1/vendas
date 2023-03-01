@@ -1,41 +1,56 @@
 import 'dart:convert';
 
 class ClientModel {
-  String id;
-  String cod;
-  String razao;
-  String fantasia;
-  String cnpj;
-  String endereco;
-  String bairro;
-  String numero;
-  String complemento;
-  String cep;
-  String uf;
-  String cidade;
-  String telefone1;
-  String telefone2;
-  String email;
-  String tipo;
+  String? id;
+  String? cod;
+  String? razao;
+  String? fantasia;
+  String? cnpj;
+  String? endereco;
+  String? bairro;
+  String? numero;
+  String? complemento;
+  String? cep;
+  String? uf;
+  String? cidade;
+  String? telefone1;
+  String? telefone2;
+  String? email;
+  String? tipo;
 
   ClientModel({
-    required this.id,
-    required this.cod,
-    required this.razao,
-    required this.fantasia,
-    required this.cnpj,
-    required this.endereco,
-    required this.bairro,
-    required this.numero,
-    required this.complemento,
-    required this.cep,
-    required this.uf,
-    required this.cidade,
-    required this.telefone1,
-    required this.telefone2,
-    required this.email,
-    required this.tipo,
+    this.id,
+    this.cod,
+    this.razao,
+    this.fantasia,
+    this.cnpj,
+    this.endereco,
+    this.bairro,
+    this.numero,
+    this.complemento,
+    this.cep,
+    this.uf,
+    this.cidade,
+    this.telefone1,
+    this.telefone2,
+    this.email,
+    this.tipo,
   });
+
+  static List<ClientModel> list = [
+    ClientModel(
+      razao: 'Cliente A',
+      cnpj: '102.527.459-81',
+    ),
+    ClientModel(
+      razao: 'Cliente X',
+      cnpj: '997.555.449-11',
+    ),
+    ClientModel(
+      razao: 'Cliente O',
+      cnpj: '888.555.449-11',
+    ),
+  ];
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{

@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
           icon: Icon(Icons.sort_rounded, color: context.darkMode ? tWhiteColor : tDarkColor),
           onPressed: () => scaffoldKey.currentState?.openDrawer(),
         ),
-        title: Text("Vendas", style: Theme.of(context).textTheme.headlineMedium),
+        title: Text("Vendas", style: context.hm),
         actions: const [SyncButton()],
       ),
       body: SafeArea(

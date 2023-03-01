@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vendas/src/themes/colors/colors.dart';
+import 'package:vendas/src/extensions/index.dart';
 
 class DrawerItem extends StatelessWidget {
   const DrawerItem({
@@ -19,7 +20,6 @@ class DrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final txtTheme = Theme.of(context).textTheme;
     var isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
     var iconColor = textColor != null ? Colors.red : isDark ? tPrimaryColor : tSecondaryColor;
 
@@ -39,7 +39,7 @@ class DrawerItem extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: txtTheme.bodyLarge?.apply(color: textColor),
+        style: context.bl.apply(color: textColor),
       ),
       trailing: endIcon
           ? Container(
